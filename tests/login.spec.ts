@@ -11,7 +11,7 @@ test.afterEach(async ({ page }) => {
     console.log('Test completed');
 });
 
-test('valid login', async ({ page }) => {
+test('@validLogin @smoke  valid login', async ({ page }) => {
 
   await page.locator('input[name="username"]').click();
   await page.locator('input[name="username"]').fill('tomsmith');
@@ -22,8 +22,7 @@ test('valid login', async ({ page }) => {
 });
 
 
-
-test('invalid login', async ({ page }) => {
+test('@invalidLogin invalid login', async ({ page }) => {
 
   await page.locator('input[name="username"]').click();
   await page.locator('input[name="username"]').fill('xxx');

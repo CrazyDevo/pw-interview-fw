@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('test', async ({ page }) => {
+test('@smoke test', async ({ page }) => {
   await page.goto('https://the-internet-5chk.onrender.com/login');
   await page.locator('input[name="username"]').click();
   await page.locator('input[name="username"]').fill('tomsmith');
